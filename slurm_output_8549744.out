@@ -1,0 +1,43 @@
+============================================================================================== 
+Warning! Mixing Conda and module environments may lead to corruption of the
+user environment. 
+We do not recommend users mixing those two environments unless absolutely
+necessary. Note that 
+SURF does not provide any support for Conda environment.
+For more information, please refer to our software policy page:
+https://servicedesk.surf.nl/wiki/display/WIKI/Software+policy+Snellius#SoftwarepolicySnellius-UseofAnacondaandMinicondaenvironmentsonSnellius 
+
+Remember that many packages have already been installed on the system and can
+be loaded using 
+the 'module load <package__name>' command. If you are uncertain if a package is
+already available 
+on the system, please use 'module avail' or 'module spider' to search for it.
+============================================================================================== 
+usage: conda [-h] [--no-plugins] [-V] COMMAND ...
+conda: error: argument COMMAND: invalid choice: 'activate' (choose from 'clean', 'compare', 'config', 'create', 'info', 'init', 'install', 'list', 'notices', 'package', 'remove', 'uninstall', 'rename', 'run', 'search', 'update', 'upgrade', 'build', 'convert', 'debug', 'develop', 'doctor', 'index', 'inspect', 'metapackage', 'render', 'skeleton', 'repo', 'server', 'pack', 'content-trust', 'verify', 'token', 'env')
+Namespace(train_size=2000, val_size=1000, test_size=1000, conv_type='cirular', net_type='Net2', image_size=32, offset1=7, offset2=23, fluctuation=6, n_repeat=10, epochs=50, batch_size=200)
+Round  :   1
+Traceback (most recent call last):
+  File "/gpfs/home6/scur2785/uvadlc_practicals_2024/assignment2/part1/exercise1.1/net.py", line 190, in <module>
+    net = Net(conv_type=conv_type, net_type=net_type)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/gpfs/home6/scur2785/uvadlc_practicals_2024/assignment2/part1/exercise1.1/net.py", line 60, in __init__
+    padding=padding_size, bias=False,
+            ^^^^^^^^^^^^
+UnboundLocalError: cannot access local variable 'padding_size' where it is not associated with a value
+srun: error: gcn2: task 0: Exited with exit code 1
+srun: Terminating StepId=8549744.0
+
+JOB STATISTICS
+==============
+Job ID: 8549744
+Cluster: snellius
+User/Group: scur2785/scur2785
+State: FAILED (exit code 1)
+Nodes: 1
+Cores per node: 9
+CPU Utilized: 00:00:04
+CPU Efficiency: 2.78% of 00:02:24 core-walltime
+Job Wall-clock time: 00:00:16
+Memory Utilized: 2.17 MB
+Memory Efficiency: 0.00% of 60.00 GB

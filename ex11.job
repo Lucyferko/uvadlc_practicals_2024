@@ -1,0 +1,27 @@
+#!/bin/bash
+
+#SBATCH --partition=gpu_mig
+#SBATCH --gpus=1
+#SBATCH --job-name=ExampleJob
+#SBATCH --ntasks=1
+#SBATCH --cpus-per-task=9
+#SBATCH --time=00:59:00
+#SBATCH --output=slurm_output_%A.out
+
+module purge
+module load 2023
+module load Anaconda3/2023.07-2
+
+# Your job starts in the directory where you call sbatch
+cd $HOME/uvadlc_practicals_2024/assignment2/part1/exercise1.1
+# sbatch: Single-node jobs run on a shared node by default. Add --exclusive if you want to use a node exclusively.
+# sbatch: A full node consists of 72 CPU cores, 491520 MiB of memory and 8 GPUs and can be shared by up to 8 jobs.
+# sbatch: By default shared jobs get 6826 MiB of memory per CPU core, unless explicitly overridden with --mem-per-cpu, --mem-per-gpu or --mem.
+# sbatch: You will be charged for 1 GPUs, based on the number of CPUs, GPUs and the amount memory that you've requested.
+# Submitted batch job 8545863
+
+# Activate your environment
+conda activate dl2024
+source activate dl2024
+# Run your code
+srun python net.py --net_type='Net2' --conv_type='fconv'
