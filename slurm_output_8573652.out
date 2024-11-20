@@ -1,0 +1,119 @@
+============================================================================================== 
+Warning! Mixing Conda and module environments may lead to corruption of the
+user environment. 
+We do not recommend users mixing those two environments unless absolutely
+necessary. Note that 
+SURF does not provide any support for Conda environment.
+For more information, please refer to our software policy page:
+https://servicedesk.surf.nl/wiki/display/WIKI/Software+policy+Snellius#SoftwarepolicySnellius-UseofAnacondaandMinicondaenvironmentsonSnellius 
+
+Remember that many packages have already been installed on the system and can
+be loaded using 
+the 'module load <package__name>' command. If you are uncertain if a package is
+already available 
+on the system, please use 'module avail' or 'module spider' to search for it.
+============================================================================================== 
+usage: conda [-h] [--no-plugins] [-V] COMMAND ...
+conda: error: argument COMMAND: invalid choice: 'activate' (choose from 'clean', 'compare', 'config', 'create', 'info', 'init', 'install', 'list', 'notices', 'package', 'remove', 'uninstall', 'rename', 'run', 'search', 'update', 'upgrade', 'build', 'convert', 'debug', 'develop', 'doctor', 'index', 'inspect', 'metapackage', 'render', 'skeleton', 'repo', 'content-trust', 'server', 'env', 'pack', 'token', 'verify')
+EEEEE
+======================================================================
+ERROR: test_apply_rotary_emb (__main__.TestCausalSelfAttention.test_apply_rotary_emb)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/gpfs/home6/scur2785/uvadlc_practicals_2024/assignment2/part2/public_unittest.py", line 46, in test_apply_rotary_emb
+    self.assertEqual(xq_rot.shape, xq.shape)
+                     ^^^^^^^^^^^^
+AttributeError: 'ellipsis' object has no attribute 'shape'
+
+======================================================================
+ERROR: test_attention_component_shapes_and_softmax (__main__.TestCausalSelfAttention.test_attention_component_shapes_and_softmax)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/gpfs/home6/scur2785/uvadlc_practicals_2024/assignment2/part2/public_unittest.py", line 68, in test_attention_component_shapes_and_softmax
+    outputs = module(x)
+              ^^^^^^^^^
+  File "/home/scur2785/.conda/envs/dl2024/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/scur2785/.conda/envs/dl2024/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/gpfs/home6/scur2785/uvadlc_practicals_2024/assignment2/part2/gpt.py", line 152, in forward
+    print(f"q shape: {q.shape}, k shape: {k.shape}, v shape: {v.shape}")
+                      ^^^^^^^
+AttributeError: 'ellipsis' object has no attribute 'shape'
+
+======================================================================
+ERROR: test_causal_masking (__main__.TestCausalSelfAttention.test_causal_masking)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/gpfs/home6/scur2785/uvadlc_practicals_2024/assignment2/part2/public_unittest.py", line 34, in test_causal_masking
+    outputs = module(x)
+              ^^^^^^^^^
+  File "/home/scur2785/.conda/envs/dl2024/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/scur2785/.conda/envs/dl2024/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/gpfs/home6/scur2785/uvadlc_practicals_2024/assignment2/part2/gpt.py", line 152, in forward
+    print(f"q shape: {q.shape}, k shape: {k.shape}, v shape: {v.shape}")
+                      ^^^^^^^
+AttributeError: 'ellipsis' object has no attribute 'shape'
+
+======================================================================
+ERROR: test_gradient_flow (__main__.TestCausalSelfAttention.test_gradient_flow)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/gpfs/home6/scur2785/uvadlc_practicals_2024/assignment2/part2/public_unittest.py", line 57, in test_gradient_flow
+    output = module(x)
+             ^^^^^^^^^
+  File "/home/scur2785/.conda/envs/dl2024/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/scur2785/.conda/envs/dl2024/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/gpfs/home6/scur2785/uvadlc_practicals_2024/assignment2/part2/gpt.py", line 152, in forward
+    print(f"q shape: {q.shape}, k shape: {k.shape}, v shape: {v.shape}")
+                      ^^^^^^^
+AttributeError: 'ellipsis' object has no attribute 'shape'
+
+======================================================================
+ERROR: test_output_shape (__main__.TestCausalSelfAttention.test_output_shape)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/gpfs/home6/scur2785/uvadlc_practicals_2024/assignment2/part2/public_unittest.py", line 26, in test_output_shape
+    output = module(x)
+             ^^^^^^^^^
+  File "/home/scur2785/.conda/envs/dl2024/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/scur2785/.conda/envs/dl2024/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/gpfs/home6/scur2785/uvadlc_practicals_2024/assignment2/part2/gpt.py", line 152, in forward
+    print(f"q shape: {q.shape}, k shape: {k.shape}, v shape: {v.shape}")
+                      ^^^^^^^
+AttributeError: 'ellipsis' object has no attribute 'shape'
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.042s
+
+FAILED (errors=5)
+srun: error: gcn2: task 0: Exited with exit code 1
+srun: Terminating StepId=8573652.0
+
+JOB STATISTICS
+==============
+Job ID: 8573652
+Cluster: snellius
+User/Group: scur2785/scur2785
+State: FAILED (exit code 1)
+Nodes: 1
+Cores per node: 9
+CPU Utilized: 00:00:06
+CPU Efficiency: 4.44% of 00:02:15 core-walltime
+Job Wall-clock time: 00:00:15
+Memory Utilized: 2.34 MB
+Memory Efficiency: 0.00% of 60.00 GB
